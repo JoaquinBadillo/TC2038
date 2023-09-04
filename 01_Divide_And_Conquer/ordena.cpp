@@ -1,19 +1,19 @@
+#include "lib/mergesort.hpp"
+#include "lib/quicksort.hpp"
+#include "lib/reader.hpp"
 #include <vector>
-#include "reader.hpp"
-#include "mergesort.hpp"
-#include "quicksort.hpp"
 
 using namespace std;
 
-int main(){
-    vector<int> datos, datosOrdenados;
-    datos = leeDatos("datos.txt");
-    imprimeDatos(datos);
+int main() {
+  vector<int> datos, datosOrdenados;
+  datos = leeDatos("datos.txt");
+  imprimeDatos(datos);
 
-    datosOrdenados = mergeSort(datos);
-    imprimeDatos(datosOrdenados);
-    
-    datosOrdenados = quickSort(datos);
-    imprimeDatos(datosOrdenados);
-    return 0;
+  datosOrdenados = mergeSort(datos);
+  imprimeDatos(datosOrdenados);
+
+  datosOrdenados = quickSort(datos);
+  imprimeDatos(datosOrdenados);
+  return 0;
 }
