@@ -1,7 +1,7 @@
 if __name__ == "__main__":
     for i in range(1, 4):
-        with open(f"./tests/results/test{i}.txt", "r") as f:
-            with open(f"./tests/validate/test{i}.txt", "r") as g:
+        with open(f"./results/test{i}.txt", "r") as f:
+            with open(f"./validate/test{i}.txt", "r") as g:
                 count = 0
                 for _ in range(3):
                     if (f.readline() == g.readline()):
