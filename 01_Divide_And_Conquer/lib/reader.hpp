@@ -10,8 +10,9 @@ std::vector<int> leeDatos(std::string nombreArchivo);
 void imprimeDatos(std::vector<int> &datos);
 
 std::vector<int> leeDatos(std::string inFile) {
-    std::vector<int> data;
+    std::vector<int> data = {};
     std::ifstream file;
+    
     file.open(inFile);
     
     if (file.is_open()){

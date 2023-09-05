@@ -10,6 +10,7 @@ vector<int> doQuickSort(vector<int> &data, int start, int end);
 
 // QuickSort wrapper, gets the vector by value and returns the sorted copy
 vector<int> quickSort(vector<int> data) {
+    if (data.size() <= 1) return data;
     return doQuickSort(data, 0, data.size() - 1);
 }
 
