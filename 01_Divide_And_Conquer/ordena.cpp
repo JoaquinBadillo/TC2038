@@ -2,11 +2,11 @@
 #include "lib/quicksort.hpp"
 #include "lib/reader.hpp"
 
-#include <vector>
-
 using namespace std;
 
+// Driver Program
 int main(int argc, char const *argv[]) {
+  // Check if data file is passed as argument, otherwise use default ("datos.txt")
   string file;
   file = (argc > 1) ? argv[1] : "datos.txt";
 
