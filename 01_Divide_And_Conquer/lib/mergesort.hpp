@@ -1,3 +1,13 @@
+/* 
+ MergeSort Header File
+
+ Contains functions to sort a vector of integers using the 
+ MergeSort algorithm to return a sorted copy.
+
+ Author: Joaquín Badillo A0102634
+ Last update: 04/Sept/2023
+*/
+
 #ifndef MERGESORT_H
 #define MERGESORT_H
 
@@ -9,11 +19,39 @@ vector<int> mergeSort(vector<int> &data);
 vector<int> doMergeSort(vector<int> &data, int start, int end);
 vector<int> merge(vector<int> &left, vector<int> &right);
 
-// MergeSort wrapper
+/*
+  MergeSort Wrapper
+  Gets the vector by reference and returns a sorted copy.
+  It also abstracts the recursive calls from the user.
+
+  Params:
+  vector<int> data: vector to be sorted
+
+  Returns:
+  vector<int>: sorted copy of the vector
+
+  Time Complexity:
+  O(n log n)
+*/
 vector<int> mergeSort(vector<int> &data) {
     return doMergeSort(data, 0, data.size() - 1);
 }
 
+/*
+  MergeSort implementation
+  Gets a vector by reference and returns a sorted copy.
+  
+  Params:
+  vector<int> data: vector to be sorted
+  int start: start index of the subarray to be sorted
+  int end: end index of the subarray to be sorted
+
+  Returns:
+  vector<int>: sorted copy of the vector
+
+  Time Complexity:
+  O(n log n)
+*/
 // MergeSort implementation that doesn't modify the original vector (it returns a sorted copy)
 vector<int> doMergeSort(vector<int> &data, int start, int end) {
     // Slight modification to return vector
@@ -30,6 +68,20 @@ vector<int> doMergeSort(vector<int> &data, int start, int end) {
     return merge(left, right);
 }
 
+/*
+  Merge Procedure
+  Combines two sorted vectors into a single sorted vector.
+
+  Params:
+  vector<int> left: sorted left half
+  vector<int> right: sorted right half
+
+  Returns:
+  vector<int>: sorted vector containing the elements of left and right
+
+  Time Complexity:
+  O(n)
+*/
 vector<int> merge(vector<int> &left, vector<int> &right) {
     vector<int> res;
 

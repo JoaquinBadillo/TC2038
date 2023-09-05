@@ -1,3 +1,15 @@
+/* 
+ Driver Program
+ 
+ Uses the reader, mergesort and quicksort implementations 
+ to sort a list of integers and print the results to the
+ console.
+
+ Author: Prof. Víctor Manuel de la Cueva Hernández 
+ Modified by: Joaquín Badillo A0102634
+ Last update: 04/Sept/2023
+*/
+
 #include "lib/mergesort.hpp"
 #include "lib/quicksort.hpp"
 #include "lib/reader.hpp"
