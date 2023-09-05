@@ -1,16 +1,16 @@
 /* 
- File Reader Header File
- 
- Contains functions to read a text input file:
-  The input  has the number of records in the 
-  first line, followed by a list of integers (separated 
-  by linebreaks) and returns a vector with the data.
- 
- It also contains a function to print the contents of a 
- vector.
-
- Author: Joaquín Badillo A0102634
- Last update: 04/Sept/2023
+  File Reader Header File
+  
+  Contains functions to read a text input file:
+   The input has the number of records in the first 
+   line, followed by a list of integers (separated by 
+   linebreaks) and returns a vector with the data.
+  
+  It also contains a function to print the contents of 
+  a vector.
+  
+  Author: Joaquín Badillo A0102634
+  Last update: 04/Sept/2023
 */
 
 #ifndef READER_H

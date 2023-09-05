@@ -1,11 +1,11 @@
 /* 
- MergeSort Header File
-
- Contains functions to sort a vector of integers using the 
- MergeSort algorithm to return a sorted copy.
-
- Author: Joaquín Badillo A0102634
- Last update: 04/Sept/2023
+  MergeSort Header File
+ 
+  Contains functions to sort a vector of integers using the 
+  MergeSort algorithm to return a sorted copy.
+ 
+  Author: Joaquín Badillo A0102634
+  Last update: 04/Sept/2023
 */
 
 #ifndef MERGESORT_H
@@ -40,6 +40,7 @@ vector<int> mergeSort(vector<int> &data) {
 /*
   MergeSort implementation
   Gets a vector by reference and returns a sorted copy.
+  It does not modify the original vector.
   
   Params:
   vector<int> data: vector to be sorted
@@ -52,7 +53,6 @@ vector<int> mergeSort(vector<int> &data) {
   Time Complexity:
   O(n log n)
 */
-// MergeSort implementation that doesn't modify the original vector (it returns a sorted copy)
 vector<int> doMergeSort(vector<int> &data, int start, int end) {
     // Slight modification to return vector
     if (start > end) return {};
@@ -85,6 +85,7 @@ vector<int> doMergeSort(vector<int> &data, int start, int end) {
 vector<int> merge(vector<int> &left, vector<int> &right) {
     vector<int> res;
 
+    // Left and right iterators
     auto li = left.begin();
     auto ri = right.begin();
 
@@ -101,7 +102,7 @@ vector<int> merge(vector<int> &left, vector<int> &right) {
         }
     }
 
-    // If left isn't traversed push the remaining elements.
+    // If left isn't fully traversed, push the remaining elements.
     while (li != left.end()) {
         res.push_back(*li);
         li++;

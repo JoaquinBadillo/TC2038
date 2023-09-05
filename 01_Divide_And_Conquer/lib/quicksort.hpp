@@ -1,11 +1,11 @@
 /* 
- QuickSort Header File
-
- Contains functions to sort a vector of integers using the 
- QuickSort algorithm to return a sorted copy.
-
- Author: Joaquín Badillo A0102634
- Last update: 04/Sept/2023
+  QuickSort Header File
+ 
+  Contains functions to sort a vector of integers using the 
+  QuickSort algorithm to return a sorted copy.
+ 
+  Author: Joaquín Badillo A0102634
+  Last update: 04/Sept/2023
 */
 
 #ifndef QUICKSORT_H
@@ -35,7 +35,8 @@ vector<int> doQuickSort(vector<int> &data, int start, int end);
   O(n^2) in worst case
 */
 vector<int> quickSort(vector<int> data) {
-    if (data.size() <= 1) return data; // Trivial sort
+    // Check if data is trivially sorted, otherwise sort it
+    if (data.size() <= 1) return data;
     return doQuickSort(data, 0, data.size() - 1);
 }
 
@@ -46,7 +47,7 @@ vector<int> quickSort(vector<int> data) {
   It uses the last element as the pivot.
  
   Params:
-  vector<int> &data: vector to be sorted
+  vector<int> data: vector to be sorted
   int start: start index of the subarray to be sorted
   int end: end index of the subarray to be sorted
  
