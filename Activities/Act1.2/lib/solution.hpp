@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <optional>
+#include <utility>
 #include <vector>
 
 void printRes(const std::optional<std::vector<int>> &res) {
@@ -29,6 +30,9 @@ void printRes(const std::optional<std::vector<int>> &res) {
 void escribeRespuesta(int n) {
   std::optional<std::vector<int>> res1 = minNumMonGR(n);
   printRes(res1);
+  std::optional<std::vector<std::pair<int, int>>> res2 = minNumMonDP(n);
+  for (auto val : *res2)
+    std::cout << val.first << std::endl;
 }
 
 #endif
