@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     std::cin >> n;
   }
 
-  std::cout << "Enter the values:\n";
+  std::cout << "Enter the values (in order and one per line):\n";
 
   for (int i = 0; i < n; i++) {
     int val;

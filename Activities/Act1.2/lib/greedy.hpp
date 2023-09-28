@@ -1,3 +1,17 @@
+/*
+  Greedy Approach Header File
+
+  Determines thenumber of coins to use
+  given a set of denomination and a value to pay,
+  using a Greedy Approach.
+
+  * The algorithm is incorrect when trying to find
+    the minimum number of coins as it may fail. *
+
+  Author: Joaquín Badillo A01026364
+  Last Update: 27/Sept/2023
+*/
+
 #ifndef GREEDY_H
 #define GREEDY_H
 
@@ -6,6 +20,8 @@
 #include <vector>
 
 /*
+ Minimum Number of Coins
+
  Implementation of a greedy approach to give out change with
  a particular set of denominations (which can be used indefinitely).
 
@@ -16,7 +32,7 @@
  int n - The quantity that needs to be paid.
 
  Result:
- optional<vector<int>> - A vector that contains the number of coins used
+ vector<int>? - A vector that contains the number of coins used
                          for each denomination if the program succeeds,
                          empty otherwise.
 
