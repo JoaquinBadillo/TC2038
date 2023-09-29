@@ -42,6 +42,7 @@ void printRes(const std::optional<std::vector<int>> &res) {
 
   int i = 0;
 
+  // Loop to display only the coins that are used (greater than 0)
   for (int val : *res) {
     if (val > 0) {
       std::cout << val << (val > 1 ? " monedas " : " moneda ");

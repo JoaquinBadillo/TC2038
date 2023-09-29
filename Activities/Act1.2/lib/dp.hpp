@@ -31,16 +31,18 @@
 
  Result:
  vector<int>? - A vector that contains the number of coins used
-                         for each denomination if the program succeeds,
-                         empty otherwise.
+                for each denomination if the program succeeds,
+                empty otherwise.
 
   Time Complexity:
   O(nd), where n is the quantity to return in cash and d = |denominations|
 */
 std::optional<std::vector<int>> minNumMonDP(int n) {
+  // Memo contains pairs of  the form: (number of coins, previous state)
   std::vector<std::pair<int, int>> memo;
   memo.push_back(std::make_pair(0, 0));
 
+  // Fill memo using DP
   for (int i = 1; i < n + 1; i++) {
     int state = -1;
 
@@ -53,6 +55,7 @@ std::optional<std::vector<int>> minNumMonDP(int n) {
           (state == -1 || memo[temp].first < memo[state].first) ? temp : state;
     }
 
+    // If a state cannot be reached, the program might fail: return empty option
     if (state == -1)
       return {};
 
@@ -72,6 +75,7 @@ std::optional<std::vector<int>> minNumMonDP(int n) {
     state = memo[state].second;
   }
 
+  // Result vector
   std::vector<int> result(gl::denominations.size());
 
   for (int i = 0; i < gl::denominations.size(); i++) {
