@@ -1,3 +1,13 @@
+/*
+  Branch and Bound Header File
+
+  Functions to find an optimal solution to the maze using a branch 
+  and bound algorithm.
+
+  Author: Joaquín Badillo A01026364
+  Last Update: 09 Oct 2023
+*/
+
 #ifndef BNB_H
 #define BNB_H
 
@@ -62,6 +72,9 @@ namespace bnb {
   O(NM * lg(NM))
 */
 void branchAndBound() {
+  if (gl::impossibleMaze())
+    return;
+  
   int best = MAX;
   std::unordered_map<int, bnb::node> visited;
   std::priority_queue<bnb::node, std::vector<bnb::node>, bnb::compare> frontier;

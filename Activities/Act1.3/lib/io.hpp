@@ -21,6 +21,20 @@
 void leeArchivo(std::string file);
 void imprimeSolucion();
 
+/* File reader
+  
+  Reads a text file containing a maze and saves it to
+  global variables.
+
+  Params:
+  std::string inFile - The name of the file to read
+
+  Returns:
+  void - Saves results to global variables (gl::rows, gl::cols, gl::maze)
+
+  Time Complexity:
+  O(NM), where N is the number of lines and M is the number of characters to read.
+*/
 void leeArchivo(std::string inFile) {
   std::ifstream file;
   file.open(inFile);
@@ -48,11 +62,36 @@ void leeArchivo(std::string inFile) {
   }
 }
 
+/* Print as Matrix
+
+  Outputs a vector as the desired matrix to 
+  the standard output.
+
+  Params:
+  std::vector<int> v - The vector to print
+
+  Returns:
+  void - (side effect).
+
+  Time Complexity:
+  O(|v|), where |v| is the size of the vector.
+*/
 void printAsMatrix(const std::vector<int> &v) {
   for (int i = 0; i < v.size(); i++)
     std::cout << v[i] << (gl::getColumn(i) == gl::cols - 1 ? "\n" : " "); 
 }
 
+/* Solution Printer
+
+  Prints the solution to the maze using the global variables
+  gl::btSolution and gl::bnbSolution.
+
+  Side effect function: () => void
+  No params, no returns.
+
+  Time Complexity:
+  O(NM), where N is the number of rows and M is the number of columns.
+*/
 void imprimeSolucion() {
   if (gl::btSolution.size() == 0) {
     std::cout << "No hay solución." << std::endl;
