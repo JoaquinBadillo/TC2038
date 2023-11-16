@@ -1,0 +1,3 @@
+[submodule "Projects/01_Transmission_Analysis"]
+	path = Projects/01_Transmission_Analysis
+	url = https://github.com/JoaquinBadillo/TC2038-E1.git
