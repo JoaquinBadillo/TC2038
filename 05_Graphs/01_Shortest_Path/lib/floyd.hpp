@@ -5,7 +5,18 @@
 #include "reader.hpp"
 
 namespace sp {
+    /* Floyd Warshall algorithm
+     * 
+     * The Floyd-Warshall algorithm is an algorithm for finding shortest paths in a weighted graph
+     * with positive or negative edge weights (but with no negative cycles).
 
+
+     * @param print: print the matrix of distances
+     * The graph is stored as a global variable.
+     * An adjacency matrix is used to store the distances between nodes (and avoid overwriting)
+     
+     * Time complexity: O(V^3)
+    */
     void floyd(bool print) {
         AdjMatrix dist(nodes, std::vector<int>(nodes));
 
