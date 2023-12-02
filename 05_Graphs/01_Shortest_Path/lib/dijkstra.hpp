@@ -10,6 +10,7 @@ namespace sp {
         // Initialization
         MinHeap pq;
         std::vector<int> dist(nodes, INF);
+        std::vector<bool> permanent(nodes, false);
         dist[source] = 0;
 
         pq.push(std::make_pair(0, source));
@@ -17,6 +18,11 @@ namespace sp {
         while (!pq.empty()) {
             Node current = pq.top();
             pq.pop();
+
+            if (permanent[current.second])
+                continue;
+
+            permanent[current.second] = true;
 
             for (auto& [destination, weight] : graph[current.second]) {
                 if (dist[destination] > dist[current.second] + weight) {
