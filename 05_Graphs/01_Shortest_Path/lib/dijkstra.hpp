@@ -6,6 +6,17 @@
 #include "reader.hpp"
 
 namespace sp {
+    /* Dijkstra's Algorithm
+       
+     * Find the shortest distance from source to all nodes
+     * The graph is stored as a global variable.
+     * A min heap is used as a priority queue.
+
+     * @param source: the source node
+     * @param print: print the distances from source to all nodes
+     
+     * Time complexity: O(E log V)
+    */
     std::vector<int> distances(int source, bool print) {
         // Initialization
         MinHeap pq;
