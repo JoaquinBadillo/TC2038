@@ -12,6 +12,13 @@ namespace sp {
     int nodes;
     int edges;
 
+    /* File reader
+     * Stores a graph passed as input in a file to a global variable
+    
+     * @param filename: the name of the file to be read
+     * The graph is stored as a global variable.
+     * 
+     */
     void init(std::string filename) {
         std::ifstream file;
         file.open(filename);

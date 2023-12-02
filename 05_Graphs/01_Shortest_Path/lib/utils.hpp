@@ -7,6 +7,7 @@
 #include <unordered_map>
 #include <limits>
 
+// Type definitions, declaration for INF and a comparator for a minheap
 namespace sp {
     typedef std::pair<int, int> Node;
 
